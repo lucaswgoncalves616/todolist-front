@@ -1,11 +1,50 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sing Up</title>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<main>
+    <section>
+        <div class="form-container">
+            <h1>Welcome back!</h1>
+            <p>Enter your Credentials to access your account</p>
+            <form action="" method="post">
+                <fieldset>
+                    <label for="email">Email address</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                </fieldset>
+                <fieldset>
+                    <div class="title-wrapper">
+                        <label for="password">Password</label>
+                    </div>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <div class="title-wrapper">
+                        <label for="repeat-password">Repeat Password</label>
+                    </div>
+                    <input type="password" name="password" id="repeat-password" placeholder="Password" required>
+                </fieldset>
+                <fieldset class="checkbox">
+                    <input type="checkbox" name="remember-me" id="remember-me">
+                    <label for="remember-me">Remember for 30 days</label>
+                </fieldset>
+                <button type="submit">Register</button>
+            </form>
+            <div class="divider">
+                <div class="line"></div>
+                <p>Or</p>
+                <div class="line"></div>
+            </div>
+            <div class="another-page">
+                <p>Already have an account?</p>
+                <a href="#">Sign In</a>
+            </div>
+        </div>
+    </section>
+    <img src="../assets/img/top-view-desk-img.jpg" alt="top-view-desk-img">
+</main>
 </body>
 </html>
