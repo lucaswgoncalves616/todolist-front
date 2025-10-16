@@ -64,20 +64,19 @@ button {
     color: var(--white);
     padding: 6px 0;
     font-weight: 700;
+    box-shadow: 2px 2px 1px #555;
 
-    transition: rotate 0.2s, color 0.2s, background-color 0.2s, border 0.2s, box-shadow 0.2s, width 0.2s;
+    transition: background-color 0.2s, box-shadow 0.1s;
 }
 
 button:active {
-    rotate: 180deg;
+    box-shadow: none;
 }
 
 button:hover {
-    width: 60%;
-    align-self: center;
-    background-color: var(--black);
-    box-shadow: 5px 5px 5px purple;
+    background-color: #274611;
 }
+
 
 .title-wrapper {
     width: 100%;
