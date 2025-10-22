@@ -1,29 +1,29 @@
 document.querySelector('form').addEventListener('submit', async (event) => {
-    event.preventDefault(); // stop the page from doing its little refresh dance 💃
+    event.preventDefault();
 
-    // Sneaky extraction of user data 🕵️‍♂️
+    const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value.trim();
 
     try {
-        const response = await fetch('http://localhost:8080/user/signin', {
+        const response = await fetch('http://localhost:8080/api/user/signin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
+                name: name,
                 email: email,
                 password: password,
             }),
         });
 
-        const result = await response.text(); // backend returns plain text: "Ok", "User Not found", etc.
+        const result = await response.text();
         console.log('Server whispers:', result);
 
         if (result === 'Ok') {
             alert('✅ Login successful! Welcome back, champ!');
-            // Redirect to homepage or dashboard (uncomment this)
-            // window.location.href = "dashboard.html";
+
         } else if (result === 'User Not found') {
             alert('😕 User not found. Maybe sign up first?');
         } else if (result === 'Incorrect password') {
@@ -34,6 +34,7 @@ document.querySelector('form').addEventListener('submit', async (event) => {
 
     } catch (error) {
         console.error('⚠️ Uh oh, signin blew up:', error);
+        console.log('aqui' + error);
         alert('Something went wrong... backend might be napping 😴');
     }
 });
