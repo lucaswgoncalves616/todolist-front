@@ -56,7 +56,7 @@ fieldset {
     font-size: 9px;
 }
 
-button {
+form > button {
     background-color: var(--green);
     width: 100%;
     height: 36px;
@@ -73,7 +73,7 @@ button:active {
     box-shadow: none;
 }
 
-button:hover {
+form > button:hover {
     background-color: #274611;
 }
 
@@ -84,7 +84,7 @@ button:hover {
     justify-content: space-between;
 }
 
-img {
+.side-img {
     width: 50.8%;
     border-bottom-left-radius: 30px;
     border-top-left-radius: 30px;
@@ -147,4 +147,37 @@ a {
 
 .another-page > a {
     font-size: 16px;
+}
+
+.sso-container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    gap: 30px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+.sso-container > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    padding: 4px 24px;
+
+    margin-top: 89px;
+}
+
+.sso-container > img {
+    width: 24px;
+    height: 24px;
+}
+
+.sso-container > p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
